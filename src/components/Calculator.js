@@ -1,54 +1,49 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import './Calculator.css';
+import Button from './Button';
 
-function Display({ value }) {
-  return <div className="display">{value}</div>;
-}
-
-function Calculator() {
-  return (
-    <div className="calculator">
-      <Display value={0} />
-      <div className="buttons">
-        <button type="button">AC</button>
-        <button type="button">+/-</button>
-        <button type="button">% </button>
-        <button type="button" className="operator">
-          ÷
-        </button>
-        <button type="button">7</button>
-        <button type="button">8</button>
-        <button type="button">9</button>
-        <button type="button" className="operator">
-          x
-        </button>
-        <button type="button">4</button>
-        <button type="button">5</button>
-        <button type="button">6</button>
-        <button type="button" className="operator">
-          -
-        </button>
-        <button type="button">1</button>
-        <button type="button">2</button>
-        <button type="button">3</button>
-        <button type="button" className="operator">
-          +
-        </button>
-        <button type="button" className="button-0">
-          0
-        </button>
-        <button type="button">.</button>
-        <button type="button" className="operator">
-          =
-        </button>
-      </div>
+const Calculator = () => (
+  <div className="calculator">
+    <Button
+      text="0"
+      textAlign="right"
+      color="#858693"
+      textColor="#fff"
+      cursor="auto"
+    />
+    <div className="row">
+      <Button text="AC" />
+      <Button text="+/-" />
+      <Button text="%" />
+      <Button text="÷" color="#f5913e" />
     </div>
-  );
-}
+    <div className="row">
+      <Button text="7" />
+      <Button text="8" />
+      <Button text="9" />
+      <Button text="x" color="#f5913e" />
+    </div>
+    <div className="row">
+      <Button text="4" />
+      <Button text="5" />
+      <Button text="6" />
+      <Button text="-" color="#f5913e" />
+    </div>
+    <div className="row">
+      <Button text="1" />
+      <Button text="2" />
+      <Button text="3" />
+      <Button text="+" color="#f5913e" />
+    </div>
+    <div className="row">
+      <Button text="0" flex={2} />
+      <Button text="." />
+      <Button text="=" color="#f5913e" />
+    </div>
+  </div>
+);
 
-Display.propTypes = {
-  value: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
-};
+Calculator.defaultProps = {};
+
+Calculator.propTypes = {};
 
 export default Calculator;
