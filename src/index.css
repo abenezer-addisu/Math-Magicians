@@ -24,6 +24,5 @@ body {
 html,
 body,
 #root {
-  height: 90%;
-  margin: 50px;
+  height: 100%;
 }
