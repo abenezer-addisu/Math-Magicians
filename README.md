@@ -104,12 +104,20 @@ npx stylelint "**/*.{css,scss}"
 npm test
 ```
 
-## 👥 Author <a name="authors"></a>
+## 👥 Authors <a name="authors"></a>
 
 👤 **Abenezer**
 
 - GitHub: [@Abenezer](https://github.com/Abenezer-addisu)
 - LinkedIn: [Abenezer](https://www.linkedin.com/in/abenezer-addisu)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+👤 **Obi Anthony**
+
+- GitHub: [@megagig](https://github.com/megagig)
+- Twitter: [@megagigsolution](https://twitter.com/megagigsolution)
+- LinkedIn: [Anthony Obi](https://www.linkedin.com/in/obi-anthony-440a1430/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
