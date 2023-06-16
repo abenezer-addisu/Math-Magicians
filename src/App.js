@@ -1,59 +1,20 @@
-import './App.css';
 import React from 'react';
-import {
-  BrowserRouter as Router, Route, Routes, Link,
-} from 'react-router-dom';
-import Calculator from './components/Calculator';
-import Quotes from './components/Quotes';
-import Home from './components/Homepage';
+import { Routes, Route } from 'react-router-dom';
+import Calculator from './components/calculator';
+import HitTheApi from './components/hittheapi';
+import './components/calculator.css';
+import Home from './components/Home';
+import Navigation from './components/Navigation';
 
-function App() {
-  return (
-    <Router>
-      <div className="App">
-        <nav style={{ marginBottom: '20px' }}>
-          <ul
-            style={{
-              display: 'flex',
-              justifyContent: 'flex-end',
-              listStyleType: 'none',
-            }}
-          >
-            <li style={{ marginRight: '10px' }}>
-              <Link to="/" style={{ color: 'blue' }}>
-                Home
-              </Link>
-            </li>
-            <li style={{ marginRight: '10px' }}>
-              <Link to="/calculator" style={{ color: 'blue' }}>
-                Calculator
-              </Link>
-            </li>
-            <li>
-              <Link to="/quotes" style={{ color: 'blue' }}>
-                Quotes
-              </Link>
-            </li>
-          </ul>
-        </nav>
-
-        <h1
-          style={{
-            textAlign: 'flex-start',
-            marginBottom: '60px',
-            marginRight: '100px',
-          }}
-        >
-          Math Magicians
-        </h1>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/calculator" element={<Calculator />} />
-          <Route path="/quotes" element={<Quotes />} />
-        </Routes>
-      </div>
-    </Router>
-  );
-}
+const App = () => (
+  <div className="App">
+    <Navigation />
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/calculator" element={<Calculator />} />
+      <Route path="/hittheapi" element={<HitTheApi />} />
+    </Routes>
+  </div>
+);
 
 export default App;
